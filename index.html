@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .resume-container {
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #2c3e50;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .contact-info {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .contact-placeholder {
+            background-color: #ecf0f1;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        
+        .professional-summary {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        
+        .experience-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .company-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .job-title {
+            font-size: 14px;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .date-range {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .job-description {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #555;
+        }
+        
+        .job-description ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .job-description li {
+            margin-bottom: 5px;
+        }
+        
+        .project-item {
+            margin-bottom: 15px;
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .project-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .project-description {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #555;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .degree {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .institution {
+            font-size: 13px;
+            color: #3498db;
+            margin-bottom: 3px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .skill-category {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .skill-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .skill-list {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #555;
+        }
+        
+        .languages {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        
+        .language {
+            background-color: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border-left: 4px solid #f39c12;
+            flex: 1;
+        }
+        
+        .language-name {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .language-level {
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+                font-size: 12px;
+            }
+            .resume-container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <div class="name"><span class="contact-placeholder">[YOUR NAME]</span> | SOFTWARE ENGINEER</div>
+            <div class="contact-info">
+                <span class="contact-placeholder">[Your Address]</span> | 
+                <span class="contact-placeholder">[Phone Number]</span> | 
+                <span class="contact-placeholder">[Email Address]</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="professional-summary">
+                Experienced Software Engineer with over 3 years of expertise in payment systems project management, payment solution integration, and banking system optimization. Expert in implementing payment communication protocols, developing payment system automation solutions, and managing partnerships with banks and service providers. Capable of designing and deploying complex architectures in constantly evolving environments.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            
+            <div class="experience-item">
+                <div class="company-name">SATIM</div>
+                <div class="job-title">Software Engineer</div>
+                <div class="date-range">December 2022 - Present</div>
+                <div class="job-description">
+                    <strong>Payment Solutions Management, Administration and Configuration:</strong>
+                    <ul>
+                        <li>Management, administration and configuration of payment solutions such as SmartVista</li>
+                        <li>IPay/EPG ACS for electronic payment management (ePayment)</li>
+                        <li>SVFE for authorization server and transaction processing</li>
+                        <li>SVFM for fraud management</li>
+                        <li>SVBO for terminal management and processing as well as cards and bank accounts</li>
+                        <li>TMS for national POS terminal fleet management</li>
+                        <li>MOBILE SWITCH for mobile transaction and transfer management</li>
+                    </ul>
+                    
+                    <strong>Payment Solution Database Management and Administration:</strong>
+                    <ul>
+                        <li>Management and administration of payment solution database (SVFE authorization server - MXSQL and ORACLE)</li>
+                        <li>Management and administration of TMS database (Terminal Management System) dedicated for all national POS terminals (MySQL, SQLite)</li>
+                    </ul>
+                    
+                    <strong>Payment System Project Management:</strong>
+                    <ul>
+                        <li>Lead projects related to integration or migration of payment systems</li>
+                        <li>Write functional and technical specifications</li>
+                        <li>Write test specifications for payment solution testing</li>
+                        <li>Coordinate involved teams (internal and external) to ensure project delivery within deadlines</li>
+                    </ul>
+                    
+                    <strong>Technical Support and Assistance:</strong>
+                    <ul>
+                        <li>Provide technical support (internal/Banks) for resolving transaction and payment system issues</li>
+                        <li>Train technical and commercial teams on payment tool usage</li>
+                        <li>Accompany banking partners in certification and integration testing</li>
+                        <li>Accompany web merchants during development and certification of payment modules on their websites and mobile applications</li>
+                    </ul>
+                    
+                    <strong>Technology Watch and Innovation:</strong>
+                    <ul>
+                        <li>Follow trends and innovations in the payment field (mobile payment, contactless, etc.)</li>
+                        <li>Propose improvements or new solutions to meet market and customer needs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="company-name">HTS</div>
+                <div class="job-title">Field Technician</div>
+                <div class="date-range">October 2022 - December 2022</div>
+                <div class="job-description">
+                    <ul>
+                        <li>Repair and maintenance of bill counters and exchange rate display boards</li>
+                        <li>Field intervention on various devices (bill counters on multiple models, exchange rate display boards, etc.)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Relevant Projects</div>
+            
+            <div class="project-item">
+                <div class="project-title">ATM Fleet Status Automation Project</div>
+                <div class="project-description">
+                    <ul>
+                        <li>Development of a dedicated prototype for retrieving all data from the ATM fleet</li>
+                        <li>Development of a script designed for decoding information (BITMAP) retrieved from the server for proper display of ATM status</li>
+                        <li>Visualization and presentation of ATM status in real-time</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Project Manager - "Certification of new payment solution for CBS of ASB, HSB and BDR banks"</div>
+                <div class="project-description">
+                    <ul>
+                        <li>Write data element documents for each type of ISO message</li>
+                        <li>Write test specifications</li>
+                        <li>Switch connection to authorization server</li>
+                        <li>Network testing (logon, logoff, echo test, cutover...), TCP header</li>
+                        <li>Verification of ISO messages exchanged with the bank by checking values sent on each data element</li>
+                        <li>Verification of EMV data sent on each type of message</li>
+                        <li>Go-live preparation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Team Member - "SoftPOS solution certification for NFC payments"</div>
+                <div class="project-description">
+                    <ul>
+                        <li>Validation of tests performed by certification laboratory (verification of consideration of different parameters sent by SAA such as closing time, limits, TACS, AIDs, etc.)</li>
+                        <li>Verification and validation of financial SPDH messages (payment, refund, cancellation, bill payment, etc.) and administrative (end of day, cashier closing, connection test, tele-parameterization, etc.) exchanged with authorization server</li>
+                        <li>Verification of uploaded EMV data</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Web Merchant Integration Automation Software</div>
+                <div class="project-description">
+                    <ul>
+                        <li>Electronic payment platform integration automation</li>
+                        <li>User creation in e-payment platform (usernames, passwords)</li>
+                        <li>Generation and sending of production implementation reports</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">License Plate Recognition</div>
+                <div class="project-description">
+                    <ul>
+                        <li>Plate recognition through image processing or deep learning</li>
+                        <li>Registration number reading via OCR</li>
+                        <li>Real-time implementation with camera</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Education / Training</div>
+            
+            <div class="education-item">
+                <div class="degree">Master's in Embedded Systems Electronics</div>
+                <div class="institution">Saad Dahleb University - Blida</div>
+                <div class="date-range">09/2019 - 09/2021</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">DELF B2 Diploma (French Language Test)</div>
+                <div class="institution">French Institute of Algeria, Algiers branch</div>
+                <div class="date-range">02/2021</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">TOEIC Listening and Reading Test</div>
+                <div class="institution">ETS Global</div>
+                <div class="date-range">10/2021</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">Deep Learning (AI)</div>
+                <div class="institution">GoMyCode</div>
+                <div class="date-range">11/2021 - 03/2022</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">Certificate of Completion (Advanced)</div>
+                <div class="institution">British Council</div>
+                <div class="date-range">05/2022 - 07/2022</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">ITIL 4 Training</div>
+                <div class="institution">IT TALENTS SCHOOL</div>
+                <div class="date-range">04/2023</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">Agile Project Management Method</div>
+                <div class="institution">Professional Training</div>
+                <div class="date-range">02/2024</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">PostgreSQL Database Management</div>
+                <div class="institution">IT TALENTS SCHOOL</div>
+                <div class="date-range">05/2024</div>
+            </div>
+
+            <div class="education-item">
+                <div class="degree">EMV Standards Training</div>
+                <div class="institution">SATIM</div>
+                <div class="date-range">05/2025</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Core Competencies</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-title">Programming Languages</div>
+                    <div class="skill-list">Python, C, C++</div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-title">Databases</div>
+                    <div class="skill-list">MySQL, MXSQL, Oracle, PostgreSQL, SQLite</div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-title">Deep Learning & Computer Vision</div>
+                    <div class="skill-list">TensorFlow, OpenCV</div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-title">Software Development</div>
+                    <div class="skill-list">Design, development, and debugging</div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-title">Linux Shell</div>
+                    <div class="skill-list">Command execution, system task management, script automation</div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-title">Banking Communication Protocols</div>
+                    <div class="skill-list">ISO 8583 (v1987, v1993), NDC protocol for ATM devices, SPDH protocol for POS devices</div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-title">Electronic Device Control</div>
+                    <div class="skill-list">Arduino, Raspberry Pi - Programming and project integration</div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-title">Microsoft Office Suite</div>
+                    <div class="skill-list">Excel, Word, PowerPoint - Advanced mastery</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="languages">
+                <div class="language">
+                    <div class="language-name">English</div>
+                    <div class="language-level">Proficient</div>
+                </div>
+                <div class="language">
+                    <div class="language-name">French</div>
+                    <div class="language-level">Advanced</div>
+                </div>
+                <div class="language">
+                    <div class="language-name">Arabic</div>
+                    <div class="language-level">Native</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
